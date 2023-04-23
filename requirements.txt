@@ -1,0 +1,13 @@
+# make sure there were installed by the base
+# numpy
+# tensorflow~=2.8.0
+
+sklearn
+pandas
+matplotlib
+h5py
+Pillow
+seaborn
+opencv-python
+
+tqdm

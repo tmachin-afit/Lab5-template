@@ -169,6 +169,7 @@ def plot_confusion_matrix(cm, classes,
     plt.tight_layout()
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
+    plt.savefig(f'{fig_path}/{title}.png')
 
 
 def visualize_model(model: Model,
@@ -202,7 +203,7 @@ def visualize_model(model: Model,
     plt.figure()
     plot_confusion_matrix(confusion_matrix, classes=class_names, normalize=True,
                           title='Normalized confusion matrix')
-    plt.show()
+    # plt.show()
 
 
 def visualize_model_dataset(model: Model,

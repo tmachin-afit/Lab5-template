@@ -17,7 +17,10 @@ from tensorflow.keras.optimizers import RMSprop
 from tqdm import tqdm
 from tqdm.keras import TqdmCallback
 
-
+#TODO Set your save paths here
+fig_path = ''
+model_path = ''
+log_path = ''
 # The following functions can be used to convert a value to a type compatible
 # with tf.train.Example.
 
@@ -269,7 +272,8 @@ def main():
         for img_batch, label_batch in train_dataset.as_numpy_iterator():
             plt.imshow(img_batch[0])
             print(label_batch[0])
-            plt.show()
+            plt.savefig(f'{fig_path}/DatasetVisualization.png')
+            # plt.show()
 
     # the cifar dataset comes with these fixed values so hard code them
     total_samples = 5000 * 10
@@ -288,7 +292,7 @@ def main():
     total_test_not_cats = 1000 * 9
 
     # Make our model using a generator
-    saved_model_filename = 'model.h5'
+    saved_model_filename = f'{model_path}/model.h5'
     if not os.path.exists(saved_model_filename) or train_model:
         # TODO put your model from lab 4 here
         model = Model()

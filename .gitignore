@@ -1,0 +1,10 @@
+*.pyc
+*.log
+*.csv
+
+# /figures
+# /logs
+# /models
+/src/__pycache__
+
+**.h5

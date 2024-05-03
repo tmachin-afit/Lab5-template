@@ -2,7 +2,7 @@
 # numpy
 # tensorflow~=2.8.0
 
-sklearn
+scikit-learn
 pandas
 matplotlib
 h5py

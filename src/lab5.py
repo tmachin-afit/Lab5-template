@@ -305,8 +305,13 @@ def main():
                             dataset=eval_dataset,
                             eval_samples=total_test_samples)
 
-    # Now for a pre-trained network
+    # Show your Lab4_model solution here trained using the TFRecord generator.
+
+    # Compare the solution above to your solution from Lab 4
+
+    # Now for a pre-trained network!
     # This is similar to the example in Section 5.3 from the Chollet book
+    # Load the Keras ResNet50 CNN, trained on 'ImageNet'
     saved_model_filename = 'model_pretrained.h5'
     if not os.path.exists(saved_model_filename) or train_pre_trained_model:
         # TODO get a conv_base from a pre-trained keras model
@@ -322,7 +327,9 @@ def main():
     visualize_model_dataset(model=model_pretrained,
                             dataset=eval_dataset,
                             eval_samples=total_test_samples)
+    # Clearly show your new model, using transfer learning from the ResNet50
 
+    # Compare the pretrained model to your Lab4 model above
 
 if __name__ == "__main__":
     main()

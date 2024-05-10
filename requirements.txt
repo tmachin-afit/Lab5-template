@@ -8,6 +8,5 @@ matplotlib
 h5py
 Pillow
 seaborn
-opencv-python
-
+opencv-python-headless
 tqdm
